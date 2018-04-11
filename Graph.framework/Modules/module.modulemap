@@ -1,0 +1,11 @@
+framework module Graph {
+  umbrella header "Graph.h"
+
+  export *
+  module * { export * }
+}
+
+module Graph.Swift {
+    header "Graph-Swift.h"
+    requires objc
+}
