@@ -171,10 +171,10 @@ class AddTripViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    var emptyDict: [String: Any] = [:]
     var timestamp:String = " "
     
-    let mobile = "987654321"
+    let mobile = ""
     var trip_name = "N/A"
   //  var cities = [Any]
     let city_id = ""
@@ -182,17 +182,18 @@ class AddTripViewController: UIViewController {
     var to_date = ""
     let country_codes = [Locale.current.regionCode]
     var group_key = UUID().uuidString
-    let group_name = SO_TIMESTAMP
-    let group_id = arc4random()
+    let group_name = arc4random_uniform(9)
+    var group_id = [Any]() //"" //arc4random()
     let picture = ""
     var placeID = " "
-    let cC_id = ["qwertyuiop","asdfghjkl","zxcvbnm"]
-//    let cList = ["Goa","Mumbai","Pune"]
-//    let cName = ["Rob","Adam","Sam"]
-//    let cNum = [arc4random(),arc4random(),arc4random()]
-//    let cCode = ["91","91","91"]
-//    var gId = [arc4random(), arc4random()]
-//    var gKey = UUID().uuidString
+    
+    var cC_id = [Any]() // [""]  Pure JSON-Form -> Dictonary -> Objects -> Array/[Objects] => Key Value Coding
+    var cList = [Any]() //[""]
+    var cName = [Any]() //[""]
+    var cNum = [Any]() //[""]
+    var cCode = [Any]()
+    var gId = [arc4random(), arc4random()]
+    var gKey = UUID().uuidString
 }
 
 extension AddTripViewController {
@@ -205,29 +206,53 @@ extension AddTripViewController {
         }
     }
     
+    @IBAction func addTrip(_ sender: Any) {
+        webAddTrip()
+        print("Trip Added")
+    }
+    
     func webAddTrip(onCompletion: (() -> Void)? = nil, onError: ((Error?) -> Void)? = nil) {
         
-        self.trip_name = triptxtFeild.text!
+        emptyDict["Name"] = cName
+        emptyDict["No."] = cNum
+        emptyDict["Co"] = cCode
         
+        emptyDict["City"] = cList
+        emptyDict["cC_id"] = cC_id
+        
+        if nil == self.profileImage.image {
+            self.profileImage.image = UIImage.init(named: "photo2")
+        }
+        
+//        let img = self.profileImage.image // UIImage.init(named: "user")
+//        let imageData:Data =  UIImagePNGRepresentation(img!)!
+//        let base64String = imageData.base64EncodedString()
+//        print(base64String)
+        
+        let defaults = UserDefaults.standard
+        let mob = defaults.string(forKey: "mobile_no") as String?
+        print(mob ?? "9004368224") // 9004368224
+        
+        self.trip_name = triptxtFeild.text!
         SVProgressHUD.show()
-        let params:NSMutableDictionary? =  ["mobile_no" : 9819798769,
+        let params:NSMutableDictionary? =  ["mobile_no" : mob ?? "9004368224",
                                             "trip_name" : self.trip_name,
                                             "group_key" : group_key,
-                                            "cities" : "\(objects)",
-                                            "city_id" : "\(cC_id)",
-                                            "from_date" : "05-March-2018",
-                                            "to_date" : "15-March-2018",
-                                            "contact_names" : "\(userArr)",
-                                            "contact_number" : "\(userArr)",
-                                            "country_codes" : "\(country_codes)",
-                                            "group" : "Gro",
+                                            "cities" : "\(emptyDict["City"] ?? "N/A")",
+                                            "city_id" : "\(emptyDict["cC_id"] ?? "N/A")",
+                                            "from_date" : self.from_date,
+                                            "to_date" : self.to_date,
+                                            "contact_names" : "\(emptyDict["Name"] ?? "N/A")",
+                                            "contact_number" : "\(emptyDict["No."] ?? "N/A")",
+                                            "country_codes" : "\(emptyDict["Co"] ?? "N/A")",
+                                            "group" :  group_id,
                                             "group_id" : "\(group_id)",
                                             "picture" : ""]
         
         let theJSONData = try? JSONSerialization.data(withJSONObject: params as Any ,options: JSONSerialization.WritingOptions.prettyPrinted)
         let json = NSString(data: theJSONData!, encoding: String.Encoding.utf8.rawValue)
-        if let json = json {
-            print(json)
+        if json != nil {
+          //  print(json)
         }
         let urlString = URL(string: "http://sparkdeath324.pythonanywhere.com/trips/add_edit_trip/")
         let theRequest = NSMutableURLRequest.init(url: urlString!, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 60)
@@ -239,13 +264,16 @@ extension AddTripViewController {
             if((error) != nil) { // self.que.addOperation { }
                 print(error!.localizedDescription)
             } else { // For Debuging...
-                let str = NSString(data: data!, encoding:String.Encoding.utf8.rawValue)
-                print("Response is ->",str as Any)
+             //   let str = NSString(data: data!, encoding:String.Encoding.utf8.rawValue)
+            //    print("Response is ->",str as Any)
                 do {
                     print("Deserializing JSON...")
                     let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                     print(json)
-                    self.presentMap()
+                    DispatchQueue.main.async(execute: { () -> Void in
+                         self.presentMap()
+                        onCompletion?()
+                    })
                 } catch {
                     print("Error Deserializing JSON: \(error)")
                 }
@@ -385,7 +413,10 @@ extension AddTripViewController : GMSAutocompleteViewControllerDelegate {
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress ?? "NA")")
         print("Place ID: \(place.placeID )")
-        print("Place cooridnates: \(place.coordinate )")
+     //   print("Place cooridnates: \(place.phoneNumber  ?? "N/A")")
+        cList.append(place.formattedAddress as Any as! String)
+        cC_id.append(place.placeID)
+        cCode.append(place.placeID)
         self.placeLbl.text = " " // place.formattedAddress
         objects.insert(place.formattedAddress as Any, at: objects.endIndex)
         let indexPath =  IndexPath(row: 0, section: 0) 
@@ -585,16 +616,24 @@ extension AddTripViewController : CNContactPickerDelegate {
                 conImg =  (contact.thumbnailImageData as AnyObject) as! String
             }
             let name = contact.givenName
+            var no = ""
+            cName.append(contact.givenName)
             userArr.append(["name" : contact.givenName,"number" : contact.phoneNumbers, "image" : conImg])
             usersCollectionView.reloadData()
             timestamp = DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .medium)
-            self.group_key = timestamp + name 
+            self.group_id = [timestamp] //+ name
       //    contactListView.isHidden = false
             print(name, " -> number )")
             for number in contact.phoneNumbers {
                 let phoneNumber = number.value
-                print(name, " -> number is = \(phoneNumber)")
+                no = phoneNumber.stringValue
+                print(name, " -> number is = \(no)")
             }
+            let str = no.replacingOccurrences(of: "+", with: "")
+            let strr = str.replacingOccurrences(of: "-", with: "")
+            let strrr = strr.replacingOccurrences(of: " ", with: "")
+            print("Pure -> ",strrr)
+           cNum.append(strrr)
         }
     }
     
@@ -818,8 +857,9 @@ extension AddTripViewController : CalendarDateRangePickerViewControllerDelegate 
         toDateDLabel.text = fromdateFormatter.string(from: endDate)
         
         
-        self.from_date = String(describing: startDate)
-        self.to_date = String(describing: endDate)
+        fromdateFormatter.dateFormat = "dd-MMMM-yyyy"
+        self.from_date = fromdateFormatter.string(from: startDate) //String(describing: startDate)
+        self.to_date = fromdateFormatter.string(from: endDate) //String(describing: endDate)
         
      // dateLabel.text = dateFormatter.string(from: startDate) + " to " + dateFormatter.string(from: endDate)
         calenderView.isHidden = true

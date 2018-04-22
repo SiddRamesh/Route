@@ -29,16 +29,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
-	<key>NSCameraUsageDescription</key>
-	<string>Using Camera</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Using Photo</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Using Library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Using Camera</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Using Contacts</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Using Photo</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

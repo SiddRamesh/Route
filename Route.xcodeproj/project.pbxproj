@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2F01196D2058CDB800C6EDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F01196C2058CDB800C6EDF2 /* AppDelegate.swift */; };
-		2F0119742058CDB800C6EDF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0119722058CDB800C6EDF2 /* Main.storyboard */; };
 		2F0119762058CDB800C6EDF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0119752058CDB800C6EDF2 /* Assets.xcassets */; };
 		2F0119792058CDB800C6EDF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0119772058CDB800C6EDF2 /* LaunchScreen.storyboard */; };
-		2FFC12102069EF5900959C72 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC120F2069EF5800959C72 /* GoogleMapsBase.framework */; };
-		2FFC12122069EF6200959C72 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12112069EF6200959C72 /* GooglePlaces.framework */; };
+		2F18C081208ADBBF00B4BE2F /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18C07E208ADBBD00B4BE2F /* GoogleMapsBase.framework */; };
+		2F18C083208ADBBF00B4BE2F /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18C080208ADBBF00B4BE2F /* GooglePlaces.framework */; };
+		2F18C086208ADD0200B4BE2F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18C085208ADD0200B4BE2F /* libc++.tbd */; };
+		2F18C088208ADD1000B4BE2F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18C087208ADD1000B4BE2F /* libz.tbd */; };
 		2FFC12182069F01900959C72 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12172069F01900959C72 /* Accelerate.framework */; };
 		2FFC121A2069F02500959C72 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12192069F02500959C72 /* CoreData.framework */; };
 		2FFC121C2069F02D00959C72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC121B2069F02D00959C72 /* CoreGraphics.framework */; };
@@ -21,8 +22,6 @@
 		2FFC12222069F05E00959C72 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12212069F05E00959C72 /* CoreText.framework */; };
 		2FFC12242069F06A00959C72 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12232069F06A00959C72 /* GLKit.framework */; };
 		2FFC12262069F08900959C72 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12252069F08900959C72 /* ImageIO.framework */; };
-		2FFC12282069F0B700959C72 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12272069F0B700959C72 /* libc++.tbd */; };
-		2FFC122A2069F0C700959C72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC12292069F0C700959C72 /* libz.tbd */; };
 		2FFC122C2069F0D000959C72 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC122B2069F0D000959C72 /* OpenGLES.framework */; };
 		2FFC122E2069F0E100959C72 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC122D2069F0E100959C72 /* SystemConfiguration.framework */; };
 		2FFC12302069F0F300959C72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC122F2069F0F300959C72 /* UIKit.framework */; };
@@ -69,6 +68,7 @@
 		73024508206E01CA00A330AE /* MEVHorizontalContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73024505206E01C800A330AE /* MEVHorizontalContactsCell.m */; };
 		73024509206E01CA00A330AE /* MEVHorizontalContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 73024506206E01C900A330AE /* MEVHorizontalContacts.m */; };
 		73326F532074D6A3005F8B8B /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73326F522074D6A3005F8B8B /* CNPPopupController.m */; };
+		734D70FC2085F4BE0088B00F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D70FB2085F4BD0088B00F /* SwiftyJSON.swift */; };
 		735A16C920613ACC00607951 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A16C720613ACB00607951 /* LocationSearchTable.swift */; };
 		735A16CA20613ACC00607951 /* MViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A16C820613ACB00607951 /* MViewController.swift */; };
 		735A16CD2061411700607951 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735A16CC2061411700607951 /* CoreLocation.framework */; };
@@ -96,14 +96,6 @@
 		736E8548205BE6DE001AB8D2 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E8547205BE6DE001AB8D2 /* Welcome.swift */; };
 		736FFF7920622ED800E96306 /* GMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736FFF7820622ED800E96306 /* GMaps.swift */; };
 		736FFF7B20626F9F00E96306 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736FFF7A20626F9E00E96306 /* LoginViewController.swift */; };
-		73755461206A0E89001FB3BD /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73755460206A0E88001FB3BD /* Motion.framework */; };
-		73755462206A0E89001FB3BD /* Motion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73755460206A0E88001FB3BD /* Motion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73755465206A0EA7001FB3BD /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73755464206A0EA7001FB3BD /* Material.framework */; };
-		73755466206A0EA7001FB3BD /* Material.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73755464206A0EA7001FB3BD /* Material.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73755468206A0EF6001FB3BD /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73755467206A0EF6001FB3BD /* Graph.framework */; };
-		73755469206A0EF6001FB3BD /* Graph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73755467206A0EF6001FB3BD /* Graph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7375546B206A0FAC001FB3BD /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7375546A206A0FAB001FB3BD /* Lottie.framework */; };
-		7375546C206A0FAC001FB3BD /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7375546A206A0FAB001FB3BD /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		737735E62068BB6400761420 /* ProfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737735E52068BB6400761420 /* ProfViewController.swift */; };
 		737735EC20691FF400761420 /* spinner_.json in Resources */ = {isa = PBXBuildFile; fileRef = 737735EB20691FF400761420 /* spinner_.json */; };
 		7378F5F820724682000F35ED /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7378F5F720724682000F35ED /* AddActivityViewController.swift */; };
@@ -140,6 +132,15 @@
 		73AEE644205F9CDB005B1983 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AEE643205F9CDB005B1983 /* LoadViewController.swift */; };
 		73AEE646205F9D9D005B1983 /* cat-video.gif in Resources */ = {isa = PBXBuildFile; fileRef = 73AEE645205F9D9D005B1983 /* cat-video.gif */; };
 		73AEE648205FCA00005B1983 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AEE647205FCA00005B1983 /* Collection.swift */; };
+		73BAECCD2085D5490026EDB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73BAECCB2085D5490026EDB8 /* Main.storyboard */; };
+		73C06F31207F73980087B5F9 /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F2D207F73960087B5F9 /* Algorithm.framework */; };
+		73C06F32207F73980087B5F9 /* Algorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F2D207F73960087B5F9 /* Algorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73C06F33207F73980087B5F9 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F2E207F73970087B5F9 /* Material.framework */; };
+		73C06F34207F73980087B5F9 /* Material.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F2E207F73970087B5F9 /* Material.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73C06F35207F73980087B5F9 /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F2F207F73980087B5F9 /* Graph.framework */; };
+		73C06F36207F73980087B5F9 /* Graph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F2F207F73980087B5F9 /* Graph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73C06F3A207F73A40087B5F9 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F39207F73A40087B5F9 /* Motion.framework */; };
+		73C06F3B207F73A40087B5F9 /* Motion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73C06F39207F73A40087B5F9 /* Motion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73D18C912071FCE300AD635A /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D18C902071FCE300AD635A /* MemoryViewController.swift */; };
 		73D18C932071FD3A00AD635A /* VBPiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D18C922071FD3900AD635A /* VBPiledView.swift */; };
 		73D18C972072001D00AD635A /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D18C962072001400AD635A /* LaunchImage.png */; };
@@ -170,10 +171,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73755469206A0EF6001FB3BD /* Graph.framework in Embed Frameworks */,
-				7375546C206A0FAC001FB3BD /* Lottie.framework in Embed Frameworks */,
-				73755462206A0E89001FB3BD /* Motion.framework in Embed Frameworks */,
-				73755466206A0EA7001FB3BD /* Material.framework in Embed Frameworks */,
+				73C06F36207F73980087B5F9 /* Graph.framework in Embed Frameworks */,
+				73C06F3B207F73A40087B5F9 /* Motion.framework in Embed Frameworks */,
+				73C06F32207F73980087B5F9 /* Algorithm.framework in Embed Frameworks */,
+				73C06F34207F73980087B5F9 /* Material.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,12 +184,13 @@
 /* Begin PBXFileReference section */
 		2F0119692058CDB800C6EDF2 /* Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F01196C2058CDB800C6EDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F0119732058CDB800C6EDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F0119752058CDB800C6EDF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F0119782058CDB800C6EDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F01197A2058CDB800C6EDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FFC120F2069EF5800959C72 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
-		2FFC12112069EF6200959C72 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlaces.framework; sourceTree = "<group>"; };
+		2F18C07E208ADBBD00B4BE2F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		2F18C080208ADBBF00B4BE2F /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlaces.framework; sourceTree = "<group>"; };
+		2F18C085208ADD0200B4BE2F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		2F18C087208ADD1000B4BE2F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2FFC12172069F01900959C72 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		2FFC12192069F02500959C72 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2FFC121B2069F02D00959C72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,12 +199,9 @@
 		2FFC12212069F05E00959C72 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		2FFC12232069F06A00959C72 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2FFC12252069F08900959C72 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		2FFC12272069F0B700959C72 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		2FFC12292069F0C700959C72 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2FFC122B2069F0D000959C72 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		2FFC122D2069F0E100959C72 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2FFC122F2069F0F300959C72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2FFC12312069F0FF00959C72 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlaces.bundle; sourceTree = "<group>"; };
 		5E30CE91206753A400AEE98E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		5E30CE92206753A400AEE98E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		5E30CE93206753A400AEE98E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
@@ -255,6 +254,7 @@
 		73024506206E01C900A330AE /* MEVHorizontalContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEVHorizontalContacts.m; sourceTree = "<group>"; };
 		73326F512074D6A3005F8B8B /* CNPPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPPopupController.h; sourceTree = "<group>"; };
 		73326F522074D6A3005F8B8B /* CNPPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPPopupController.m; sourceTree = "<group>"; };
+		734D70FB2085F4BD0088B00F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		735A16C720613ACB00607951 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		735A16C820613ACB00607951 /* MViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MViewController.swift; sourceTree = "<group>"; };
 		735A16CC2061411700607951 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -294,21 +294,6 @@
 		736E8547205BE6DE001AB8D2 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		736FFF7820622ED800E96306 /* GMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMaps.swift; sourceTree = "<group>"; };
 		736FFF7A20626F9E00E96306 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		73755455206A0CC5001FB3BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
-		73755456206A0CCA001FB3BD /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Accelerate.framework; sourceTree = "<group>"; };
-		73755457206A0CCA001FB3BD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreText.framework; sourceTree = "<group>"; };
-		73755458206A0CCC001FB3BD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
-		73755459206A0CCC001FB3BD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageIO.framework; sourceTree = "<group>"; };
-		7375545A206A0CCC001FB3BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreGraphics.framework; sourceTree = "<group>"; };
-		7375545B206A0CCD001FB3BD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreTelephony.framework; sourceTree = "<group>"; };
-		7375545C206A0CCD001FB3BD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenGLES.framework; sourceTree = "<group>"; };
-		7375545D206A0CCE001FB3BD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GLKit.framework; sourceTree = "<group>"; };
-		7375545E206A0CCE001FB3BD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreImage.framework; sourceTree = "<group>"; };
-		7375545F206A0CCF001FB3BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreData.framework; sourceTree = "<group>"; };
-		73755460206A0E88001FB3BD /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Motion.framework; sourceTree = "<group>"; };
-		73755464206A0EA7001FB3BD /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Material.framework; sourceTree = "<group>"; };
-		73755467206A0EF6001FB3BD /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Graph.framework; sourceTree = "<group>"; };
-		7375546A206A0FAB001FB3BD /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
 		737735E52068BB6400761420 /* ProfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfViewController.swift; sourceTree = "<group>"; };
 		737735EB20691FF400761420 /* spinner_.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spinner_.json; sourceTree = "<group>"; };
 		7378F5F720724682000F35ED /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +337,12 @@
 		73AEE643205F9CDB005B1983 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		73AEE645205F9D9D005B1983 /* cat-video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "cat-video.gif"; sourceTree = "<group>"; };
 		73AEE647205FCA00005B1983 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		73BAECCC2085D5490026EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73C06F2D207F73960087B5F9 /* Algorithm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Algorithm.framework; sourceTree = "<group>"; };
+		73C06F2E207F73970087B5F9 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Material.framework; sourceTree = "<group>"; };
+		73C06F2F207F73980087B5F9 /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Graph.framework; sourceTree = "<group>"; };
+		73C06F30207F73980087B5F9 /* Events.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Events.framework; sourceTree = "<group>"; };
+		73C06F39207F73A40087B5F9 /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Motion.framework; sourceTree = "<group>"; };
 		73D18C902071FCE300AD635A /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		73D18C922071FD3900AD635A /* VBPiledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBPiledView.swift; sourceTree = "<group>"; };
 		73D18C962072001400AD635A /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
@@ -382,27 +373,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F18C088208ADD1000B4BE2F /* libz.tbd in Frameworks */,
+				2F18C086208ADD0200B4BE2F /* libc++.tbd in Frameworks */,
+				73C06F31207F73980087B5F9 /* Algorithm.framework in Frameworks */,
 				2FFC12302069F0F300959C72 /* UIKit.framework in Frameworks */,
 				2FFC122E2069F0E100959C72 /* SystemConfiguration.framework in Frameworks */,
 				735C6E24206620F80096554F /* QuartzCore.framework in Frameworks */,
+				73C06F33207F73980087B5F9 /* Material.framework in Frameworks */,
+				73C06F35207F73980087B5F9 /* Graph.framework in Frameworks */,
 				2FFC122C2069F0D000959C72 /* OpenGLES.framework in Frameworks */,
-				73755465206A0EA7001FB3BD /* Material.framework in Frameworks */,
-				7375546B206A0FAC001FB3BD /* Lottie.framework in Frameworks */,
-				73755468206A0EF6001FB3BD /* Graph.framework in Frameworks */,
-				2FFC122A2069F0C700959C72 /* libz.tbd in Frameworks */,
-				2FFC12282069F0B700959C72 /* libc++.tbd in Frameworks */,
+				2F18C083208ADBBF00B4BE2F /* GooglePlaces.framework in Frameworks */,
 				2FFC12262069F08900959C72 /* ImageIO.framework in Frameworks */,
 				2FFC12242069F06A00959C72 /* GLKit.framework in Frameworks */,
-				73755461206A0E89001FB3BD /* Motion.framework in Frameworks */,
 				2FFC12222069F05E00959C72 /* CoreText.framework in Frameworks */,
 				2FFC12202069F05400959C72 /* CoreTelephony.framework in Frameworks */,
 				735A16CD2061411700607951 /* CoreLocation.framework in Frameworks */,
 				2FFC121E2069F03E00959C72 /* CoreImage.framework in Frameworks */,
 				2FFC121C2069F02D00959C72 /* CoreGraphics.framework in Frameworks */,
+				73C06F3A207F73A40087B5F9 /* Motion.framework in Frameworks */,
+				2F18C081208ADBBF00B4BE2F /* GoogleMapsBase.framework in Frameworks */,
 				2FFC121A2069F02500959C72 /* CoreData.framework in Frameworks */,
 				2FFC12182069F01900959C72 /* Accelerate.framework in Frameworks */,
-				2FFC12102069EF5900959C72 /* GoogleMapsBase.framework in Frameworks */,
-				2FFC12122069EF6200959C72 /* GooglePlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,11 +403,13 @@
 		2F0119602058CDB800C6EDF2 = {
 			isa = PBXGroup;
 			children = (
+				73C06F39207F73A40087B5F9 /* Motion.framework */,
+				73C06F2D207F73960087B5F9 /* Algorithm.framework */,
+				73C06F30207F73980087B5F9 /* Events.framework */,
+				73C06F2F207F73980087B5F9 /* Graph.framework */,
+				73C06F2E207F73970087B5F9 /* Material.framework */,
 				735D8E29206D1715000C2247 /* GooglePlaces.bundle */,
-				7375546A206A0FAB001FB3BD /* Lottie.framework */,
-				73755467206A0EF6001FB3BD /* Graph.framework */,
-				73755464206A0EA7001FB3BD /* Material.framework */,
-				73755460206A0E88001FB3BD /* Motion.framework */,
+				5EE59F732067E35000B1D903 /* Main */,
 				5E30CEB72067580A00AEE98E /* RFX */,
 				735A16C620613AB800607951 /* Map */,
 				73AEE60E205F8D9E005B1983 /* Preview */,
@@ -443,15 +436,14 @@
 				2F0119752058CDB800C6EDF2 /* Assets.xcassets */,
 				2F0119772058CDB800C6EDF2 /* LaunchScreen.storyboard */,
 				2F01197A2058CDB800C6EDF2 /* Info.plist */,
-				2F0119722058CDB800C6EDF2 /* Main.storyboard */,
 				2F01196C2058CDB800C6EDF2 /* AppDelegate.swift */,
 				73EF6C5F206B7406004BB741 /* AddTripViewController.swift */,
 				7378F5F720724682000F35ED /* AddActivityViewController.swift */,
-				73E14ACB206F5FE300B32D11 /* EssentialViewController.swift */,
-				737735E52068BB6400761420 /* ProfViewController.swift */,
 				7378F5FD20724E33000F35ED /* DayTaskTableViewController.swift */,
-				5EE59F742067E68300B1D903 /* Menu.swift */,
-				5EE59F732067E35000B1D903 /* Main */,
+				7378F5FB20724DC3000F35ED /* DailyTaskViewController.swift */,
+				736E8547205BE6DE001AB8D2 /* Welcome.swift */,
+				73E14ACB206F5FE300B32D11 /* EssentialViewController.swift */,
+				73BAECCB2085D5490026EDB8 /* Main.storyboard */,
 				7369F916205A4C5D00B37259 /* Route-Bridging-Header.h */,
 				5E30CEB82067589200AEE98E /* Resources */,
 			);
@@ -503,11 +495,8 @@
 			isa = PBXGroup;
 			children = (
 				7378F5F920724D51000F35ED /* FoldingCell.swift */,
-				736FFF7A20626F9E00E96306 /* LoginViewController.swift */,
 				73F4C3D22063867D00437837 /* Signup.swift */,
-				735C6E25206641470096554F /* ProfileViewController.swift */,
-				73AEE641205F9C8E005B1983 /* UIImage+Gif.swift */,
-				73AEE643205F9CDB005B1983 /* LoadViewController.swift */,
+				737735E52068BB6400761420 /* ProfViewController.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -540,10 +529,12 @@
 			isa = PBXGroup;
 			children = (
 				5EE59FAE2067E74700B1D903 /* Photos */,
+				734D70FB2085F4BD0088B00F /* SwiftyJSON.swift */,
 				5EE59F672067E33200B1D903 /* AppFABMenuController.swift */,
 				5EE59F6A2067E33200B1D903 /* AppTabBarController.swift */,
 				5EE59F692067E33200B1D903 /* AppToolbarController.swift */,
 				5EE59FB92068001900B1D903 /* RootViewController.swift */,
+				5EE59F742067E68300B1D903 /* Menu.swift */,
 				5EE59FBA2068001900B1D903 /* UserTableView.swift */,
 				5EE59F652067E33200B1D903 /* CardTableView.swift */,
 				5EE59F682067E33200B1D903 /* CardTableViewCell.swift */,
@@ -604,7 +595,10 @@
 		735A16CB2061411700607951 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73755454206A0CB4001FB3BD /* Google */,
+				2F18C087208ADD1000B4BE2F /* libz.tbd */,
+				2F18C085208ADD0200B4BE2F /* libc++.tbd */,
+				2F18C07E208ADBBD00B4BE2F /* GoogleMapsBase.framework */,
+				2F18C080208ADBBF00B4BE2F /* GooglePlaces.framework */,
 				2FFC122F2069F0F300959C72 /* UIKit.framework */,
 				2FFC122D2069F0E100959C72 /* SystemConfiguration.framework */,
 				2FFC122B2069F0D000959C72 /* OpenGLES.framework */,
@@ -676,29 +670,6 @@
 				7369F939205A4F9000B37259 /* UIFontHelper.m */,
 			);
 			path = MD;
-			sourceTree = "<group>";
-		};
-		73755454206A0CB4001FB3BD /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				2FFC12312069F0FF00959C72 /* GooglePlaces.bundle */,
-				2FFC12112069EF6200959C72 /* GooglePlaces.framework */,
-				2FFC120F2069EF5800959C72 /* GoogleMapsBase.framework */,
-				73755455206A0CC5001FB3BD /* UIKit.framework */,
-				73755458206A0CCC001FB3BD /* SystemConfiguration.framework */,
-				7375545C206A0CCD001FB3BD /* OpenGLES.framework */,
-				2FFC12292069F0C700959C72 /* libz.tbd */,
-				2FFC12272069F0B700959C72 /* libc++.tbd */,
-				73755459206A0CCC001FB3BD /* ImageIO.framework */,
-				7375545D206A0CCE001FB3BD /* GLKit.framework */,
-				73755457206A0CCA001FB3BD /* CoreText.framework */,
-				7375545B206A0CCD001FB3BD /* CoreTelephony.framework */,
-				7375545E206A0CCE001FB3BD /* CoreImage.framework */,
-				7375545A206A0CCC001FB3BD /* CoreGraphics.framework */,
-				7375545F206A0CCF001FB3BD /* CoreData.framework */,
-				73755456206A0CCA001FB3BD /* Accelerate.framework */,
-			);
-			name = Google;
 			sourceTree = "<group>";
 		};
 		73AEE60E205F8D9E005B1983 /* Preview */ = {
@@ -852,15 +823,17 @@
 		73D7B678206F4EC800A6259C /* Def */ = {
 			isa = PBXGroup;
 			children = (
+				736FFF7A20626F9E00E96306 /* LoginViewController.swift */,
+				73AEE643205F9CDB005B1983 /* LoadViewController.swift */,
+				73AEE641205F9C8E005B1983 /* UIImage+Gif.swift */,
+				735C6E25206641470096554F /* ProfileViewController.swift */,
 				73326F512074D6A3005F8B8B /* CNPPopupController.h */,
 				73326F522074D6A3005F8B8B /* CNPPopupController.m */,
-				7378F5FB20724DC3000F35ED /* DailyTaskViewController.swift */,
 				7378F5FF20725DA0000F35ED /* TimePickerDialogViewController.h */,
 				7378F60020725DA0000F35ED /* TimePickerDialogViewController.m */,
 				7369F912205A47BE00B37259 /* ViewController.swift */,
 				736E8545205BD00C001AB8D2 /* AddTrips.swift */,
 				73AEE647205FCA00005B1983 /* Collection.swift */,
-				736E8547205BE6DE001AB8D2 /* Welcome.swift */,
 			);
 			path = Def;
 			sourceTree = "<group>";
@@ -932,6 +905,7 @@
 				5EE59FAA2067E72100B1D903 /* photo8.jpg in Resources */,
 				5EE59FB62067FC4000B1D903 /* photo4.png in Resources */,
 				5EE59FB42067FC3400B1D903 /* photo3.png in Resources */,
+				73BAECCD2085D5490026EDB8 /* Main.storyboard in Resources */,
 				735D8E2A206D1717000C2247 /* GooglePlaces.bundle in Resources */,
 				73D7B677206F4E2B00A6259C /* TimelineTableViewCell.xib in Resources */,
 				2F0119792058CDB800C6EDF2 /* LaunchScreen.storyboard in Resources */,
@@ -962,7 +936,6 @@
 				73D18CA02072023600AD635A /* bigban.jpg in Resources */,
 				73AEE62C205F8DBB005B1983 /* Nunito-Bold.ttf in Resources */,
 				73AEE62F205F8DBB005B1983 /* OpenSans-Regular.ttf in Resources */,
-				2F0119742058CDB800C6EDF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +964,7 @@
 				73AEE640205F8E71005B1983 /* PImages.swift in Sources */,
 				73326F532074D6A3005F8B8B /* CNPPopupController.m in Sources */,
 				73D7B676206F4E2B00A6259C /* TimelineTableViewCell.swift in Sources */,
+				734D70FC2085F4BE0088B00F /* SwiftyJSON.swift in Sources */,
 				736E8548205BE6DE001AB8D2 /* Welcome.swift in Sources */,
 				73AEE639205F8DBB005B1983 /* PaperOnboarding.swift in Sources */,
 				5EE59FBC2068001900B1D903 /* UserTableView.swift in Sources */,
@@ -1071,20 +1045,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2F0119722058CDB800C6EDF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F0119732058CDB800C6EDF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2F0119772058CDB800C6EDF2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2F0119782058CDB800C6EDF2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		73BAECCB2085D5490026EDB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73BAECCC2085D5490026EDB8 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1210,7 +1184,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Route/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Arckronix.Route;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1232,7 +1206,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Route/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Arckronix.Route;
 				PRODUCT_NAME = "$(TARGET_NAME)";

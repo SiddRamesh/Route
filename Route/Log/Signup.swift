@@ -169,6 +169,8 @@ class Signup: UIViewController {
     @IBOutlet var _confirmPin: UITextField!
     @IBOutlet var _saveButton: UIButton!
     
+     let defaults = UserDefaults.standard
+    
     @IBOutlet var errorText: UILabel!
     @IBOutlet var titleText: UILabel!
     var mobile = ""
@@ -295,6 +297,12 @@ class Signup: UIViewController {
         let req = """
         mobile_no=\(username)
         """
+        
+     //   let defaults = UserDefaults.standard
+        defaults.set(username, forKey: "mobile_no")
+        defaults.synchronize()
+        print("Default",username)
+        
        
         let urlString = URL(string: "http://sparkdeath324.pythonanywhere.com/users/verify_mobile_number/")
         SVProgressHUD.show()
@@ -442,6 +450,9 @@ class Signup: UIViewController {
              self.password = self._confirmPin.text!
             //     self.profileStackView.isHidden = false
             self.titleText.text = " "
+            defaults.set(self._confirmPin.text, forKey: "pin")
+            defaults.synchronize()
+        //    print("Default",username)
             self.errorText.text = "Plz Update ur Details. ."
         } else {
             self.pinStackView.isHidden = false
@@ -451,7 +462,7 @@ class Signup: UIViewController {
   
     }
     
-    //TODO: - Login
+    //TODO: - Login ......Not used
     func webSignUp(username: String, password: String, onCompletion: (() -> Void)? = nil, onError: ((Error?) -> Void)? = nil) {
         
         pinStackView.isHidden = true

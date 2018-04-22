@@ -1,0 +1,11 @@
+framework module Events {
+  umbrella header "Events.h"
+
+  export *
+  module * { export * }
+}
+
+module Events.Swift {
+    header "Events-Swift.h"
+    requires objc
+}
